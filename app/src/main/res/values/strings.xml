@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">DorenTermApp</string>
+    <string name="term_name">Term Name</string>
+    <string name="term_date">Term Date</string>
+    <string name="save">Save</string>
+    <string name="term_start_date" />
+    <string name="term_end_date" />
+    <string name="startdate">startdate</string>
+</resources>
