@@ -6,4 +6,16 @@
     <string name="term_start_date" />
     <string name="term_end_date" />
     <string name="startdate">startdate</string>
+    <string name="course_name">Course Name</string>
+    <string name="course_start_date">Course Start Date</string>
+    <string name="course_end_date">Course End Date</string>
+    <string name="course_status">Course Status</string>
+    <string name="mentor_name">Mentor Name</string>
+    <string name="mentor_phone_number">Mentor Phone Number</string>
+    <string name="mentor_email">Mentor Email</string>
+    <string name="assignment_name">Assignment Name</string>
+    <string name="assignment_date">Assignment Date</string>
+    <string name="assignment_type">Assignment Type</string>
+    <string name="channel_name">mychannel</string>
+    <string name="channel_description">mychanneldesc</string>
 </resources>

@@ -28,7 +28,7 @@ public class ThingAdapter extends RecyclerView.Adapter<ThingAdapter.TermViewHold
             itemView.setOnClickListener(v -> {
                 int position = getAdapterPosition();
                 final Terms current = mThings.get(position);
-                Intent intent = new Intent(context, TermsPage.class);//where you want it to go i guess
+                Intent intent = new Intent(context, TermAddPage.class);//where you want it to go i guess
                 intent.putExtra("id", current.getTermID());
                 intent.putExtra("name", current.getTermTitle());
                 intent.putExtra("start", current.getTermStartDate());

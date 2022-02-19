@@ -24,7 +24,6 @@ public class Repository {
     private static int NUMBER_OF_THREADS=4;
     static final ExecutorService databaseExecuter= Executors.newFixedThreadPool(NUMBER_OF_THREADS);
 
-//need deletes*****
     public Repository(Application application){
         ThingDatabaseBuilder db = ThingDatabaseBuilder.getDatabase(application);
         mTermDao = db.termsDAO();
@@ -144,6 +143,38 @@ public class Repository {
             Thread.sleep(1000);
         }catch (InterruptedException e)
         {
+            e.printStackTrace();
+        }
+    }
+
+    public void delete(Terms terms){
+        databaseExecuter.execute(()->
+                mTermDao.delete(terms));
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void delete(Courses courses){
+        databaseExecuter.execute(()->{
+            mCourseDao.delete(courses);
+        });
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void delete(Assignments assignments){
+        databaseExecuter.execute(()->{
+            mAssignmentDao.delete(assignments);
+        });
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }

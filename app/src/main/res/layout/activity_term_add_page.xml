@@ -8,60 +8,78 @@
 
     <ScrollView
         android:layout_width="409dp"
-        android:layout_height="657dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
+        android:layout_height="260dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="370dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:text="@string/term_name"/>//
+                    android:text="@string/term_name" />//
+
                 <EditText
+                    android:id="@+id/termname"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:hint="hint"
-                    android:id="@+id/termname"/>
+                    android:hint="hint" />
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:text="Term Start Date"/>//???
+                    android:text="Term Start Date" />//???
+
                 <EditText
+                    android:id="@+id/termstartdate"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:hint="hint"
-                    android:id="@+id/termstartdate"/>
+                    android:hint="hint" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:text="Term End Date"/>//???
+                    android:text="Term End Date" />//???
+
                 <EditText
+                    android:id="@+id/termenddate"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:hint="hint"
-                    android:id="@+id/termenddate"/>
+                    android:hint="hint" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
 
                 <Button
                     android:layout_width="wrap_content"
@@ -71,4 +89,30 @@
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/courserecyclerview"
+        android:layout_width="409dp"
+        android:layout_height="370dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/CourseAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="325dp"
+        android:layout_marginTop="270dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="70dp"
+        android:clickable="true"
+        android:onClick="AddCourse"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/courserecyclerview"
+        app:layout_constraintStart_toStartOf="@+id/courserecyclerview"
+        app:layout_constraintTop_toTopOf="@+id/courserecyclerview"
+        app:srcCompat="@drawable/ic_add_foreground" />
 </androidx.constraintlayout.widget.ConstraintLayout>

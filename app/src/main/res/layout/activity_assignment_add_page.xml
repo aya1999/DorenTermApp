@@ -23,12 +23,12 @@
                 <TextView
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:text="Assignment Name" />//
+                    android:text="@string/assignment_name" />//
                 <EditText
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:hint="hint"
-                    android:id="@+id/termname"/>
+                    android:id="@+id/assignmentname"/>
 
             </LinearLayout>
             <LinearLayout
@@ -39,12 +39,12 @@
                 <TextView
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:text="Assignment Date" />//???
+                    android:text="@string/assignment_date" />//???
                 <EditText
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:hint="hint"
-                    android:id="@+id/termstartdate"/>
+                    android:id="@+id/assignmentstartdate"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -56,7 +56,7 @@
                 <TextView
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:text="Assignment Type" />
+                    android:text="@string/assignment_type" />
 
                 <Spinner
                     android:id="@+id/assignTypeDropdown"

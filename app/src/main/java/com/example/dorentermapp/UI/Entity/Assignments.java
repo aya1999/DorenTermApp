@@ -16,7 +16,7 @@ public class Assignments {
 
 
     public Assignments(int assignmentID, String assignmentName, String assignmentDate, String assignmentType, int courseID) {
-        this.assignmentID = assignmentID;//may not need auto gen
+        this.assignmentID = assignmentID;
         this.assignmentName = assignmentName;
         this.assignmentDate = assignmentDate;
         this.assignmentType = assignmentType;

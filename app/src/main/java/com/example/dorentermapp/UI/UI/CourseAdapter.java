@@ -27,12 +27,16 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.CourseView
             itemView.setOnClickListener(v -> {
                 int position = getAdapterPosition();
                 final Courses current = mCourses.get(position);
-                Intent intent = new Intent(context, CourseDetailsPage.class);//where you want it to go i guess
+                Intent intent = new Intent(context, CourseDetailsPage.class);
                 intent.putExtra("id", current.getCourseID());
+                intent.putExtra("TermID", current.getTermID());
                 intent.putExtra("name", current.getCourseTitle());
                 intent.putExtra("start", current.getCourseStartDate());
                 intent.putExtra("end", current.getCourseEndDate());
                 intent.putExtra("status", current.getCourseStatus());
+                intent.putExtra("mentorname", current.getMentorName());
+                intent.putExtra("mentorphone", current.getMentorPhone());
+                intent.putExtra("mentoremail", current.getMentorEmail());
                 context.startActivity(intent);
             });
         }
